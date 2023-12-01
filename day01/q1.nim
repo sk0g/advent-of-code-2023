@@ -4,7 +4,7 @@ from strformat import fmt
 
 proc getCalibrationValue(input: string): int =
     let digits = toSeq(input.items)
-        .filterIt(it.isDigit)
+        .filter(isDigit)
         .mapIt(fmt"{it}".parseInt)
 
     return digits[0] * 10 + digits[digits.high]

@@ -30,7 +30,7 @@ proc getCalibrationValue2(input: string): int =
             ("nine", "9"),
         )
     let digits = toSeq(fixedInput.items)
-        .filterIt(it.isDigit)
+        .filter(isDigit)
         .mapIt(fmt"{it}".parseInt)
 
     return digits[0] * 10 + digits[digits.high]
