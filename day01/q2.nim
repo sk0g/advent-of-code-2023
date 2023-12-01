@@ -4,9 +4,10 @@ from strformat import fmt
 
 # PART 2
 proc getCalibrationValue2(input: string): int =
-    # Dirty hacks
+    # Dirty hacks: some numbers have their last character overlap
+    # with the first character of their first letter.
+    # Get around that by simply duplicating the final character for each number...
     var correctedInput = input.multiReplace(
-        # Dirty hacks below
         ("one", "onee"),
         ("two", "twoo"),
         ("three","threee"),
