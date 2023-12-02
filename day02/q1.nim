@@ -1,10 +1,10 @@
 import sequtils
 import strutils
 
-type CubeCounts = tuple
+type CubeCounts* = tuple
     red, green, blue: int
 
-proc readMinCubeCountsFromDraw(draw: string): (int, CubeCounts) = 
+proc readMinCubeCountsFromDraw*(draw: string): (int, CubeCounts) = 
     var cc: CubeCounts = (0, 0, 0)
     var gameNumber = 0
 
