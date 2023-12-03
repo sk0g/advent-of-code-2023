@@ -35,8 +35,8 @@ proc sumGearRatios(input: string): int =
 
             while start_i-1 >= 0 and lines[row][start_i-1].isDigit():
                 start_i -= 1
-            
-            while end_i+1 < lines[0].high and lines[row][end_i+1].isDigit():
+
+            while end_i+1 <= lines[0].high and lines[row][end_i+1].isDigit():
                 end_i += 1
 
             expandedNumberIndicesAroundGears.add(
