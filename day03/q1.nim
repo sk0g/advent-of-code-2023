@@ -56,7 +56,6 @@ proc getNumbersFromInput(input: string): seq[int] =
         if neighboursContainSymbol:
             result.add(lines[line_index][start_i .. end_i].parseInt)
 
-# Q1
 let q1result = readFile("q1.txt")
     .getNumbersFromInput()
     .foldl(a + b)
